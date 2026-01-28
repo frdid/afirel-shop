@@ -1,0 +1,46 @@
+{
+  "name": "Portable Bluetooth Speaker",
+  "description": "Enjoy rich, powerful sound anywhere with our portable Bluetooth speaker. Features 360-degree sound, waterproof design, and 20-hour battery life. Perfect for outdoor adventures, pool parties, and home entertainment.",
+  "price": 79.99,
+  "originalPrice": 99.99,
+  "category": "Electronics",
+  "brand": "SoundWave",
+  "inStock": true,
+  "featured": false,
+  "badge": "Waterproof",
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800&h=800&fit=crop",
+      "alt": "Portable Bluetooth speaker main view"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=800&h=800&fit=crop",
+      "alt": "Bluetooth speaker side angle view"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800&h=800&fit=crop",
+      "alt": "Bluetooth speaker outdoor lifestyle"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1558618666-fbd1c52cd02b?w=800&h=800&fit=crop",
+      "alt": "Bluetooth speaker pool party scene"
+    }
+  ],
+  "specifications": {
+    "Output Power": "20W RMS",
+    "Battery Life": "20 hours",
+    "Bluetooth Version": "5.0",
+    "Wireless Range": "100 feet",
+    "Water Resistance": "IPX7",
+    "Charging Time": "3 hours",
+    "Dimensions": "18cm x 7cm x 7cm",
+    "Weight": "600g",
+    "Frequency Response": "60Hz - 18kHz",
+    "Connectivity": "Bluetooth, 3.5mm AUX, USB-C"
+  },
+  "tags": ["bluetooth", "portable", "waterproof", "outdoor", "wireless", "bass"],
+  "rating": 4.5,
+  "reviewCount": 324,
+  "createdAt": "2023-09-10T00:00:00.000Z",
+  "updatedAt": "2023-11-28T00:00:00.000Z"
+}

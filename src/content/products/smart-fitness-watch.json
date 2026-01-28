@@ -1,0 +1,46 @@
+{
+  "name": "Smart Fitness Watch",
+  "description": "Track your health and fitness goals with our advanced smart watch featuring heart rate monitoring, GPS tracking, sleep analysis, and 14-day battery life. Compatible with iOS and Android devices.",
+  "price": 299.99,
+  "originalPrice": 399.99,
+  "category": "Wearables",
+  "brand": "FitTech Pro",
+  "inStock": true,
+  "featured": true,
+  "badge": "New",
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=800&fit=crop",
+      "alt": "Smart fitness watch main view"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&h=800&fit=crop",
+      "alt": "Smart fitness watch display screen"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=800&h=800&fit=crop",
+      "alt": "Smart fitness watch during workout"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=800&h=800&fit=crop",
+      "alt": "Smart fitness watch lifestyle shot"
+    }
+  ],
+  "specifications": {
+    "Display": "1.4 inch AMOLED",
+    "Battery Life": "14 days",
+    "Water Resistance": "5ATM",
+    "GPS": "Built-in GPS + GLONASS",
+    "Heart Rate": "24/7 monitoring",
+    "Storage": "4GB internal storage",
+    "Connectivity": "Bluetooth 5.0, Wi-Fi",
+    "Compatibility": "iOS 12+, Android 6.0+",
+    "Weight": "45g",
+    "Sensors": "Accelerometer, Gyroscope, Compass, SpO2"
+  },
+  "tags": ["fitness", "smartwatch", "gps", "heart-rate", "waterproof", "health"],
+  "rating": 4.6,
+  "reviewCount": 892,
+  "createdAt": "2023-12-01T00:00:00.000Z",
+  "updatedAt": "2023-12-15T00:00:00.000Z"
+}
