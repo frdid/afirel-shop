@@ -23,7 +23,7 @@ const { blog } = Astro.props;
 
 <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
   <div class="relative">
-    <a href={`/blogs/${blog.slug}`}>
+    <a href={`/afirel-shop/blogs/${blog.slug}`}>
       <img
         src={blog.data.image.url}
         alt={blog.data.image.alt}
@@ -49,7 +49,7 @@ const { blog } = Astro.props;
       <time>{new Date(blog.data.publishDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</time>
     </div>
     <h3 class="text-xl font-semibold text-gray-800 mb-3 hover:text-green-600 transition-colors duration-200">
-      <a href={`/blogs/${blog.slug}`}>{blog.data.title}</a>
+      <a href={`/afirel-shop/blogs/${blog.slug}`}>{blog.data.title}</a>
     </h3>
     <p class="text-gray-600 mb-4 line-clamp-3">{blog.data.description}</p>
     <div class="flex items-center justify-between">
@@ -57,7 +57,7 @@ const { blog } = Astro.props;
         By {blog.data.author}
       </div>
       <a
-        href={`/blogs/${blog.slug}`}
+        href={`/afirel-shop/blogs/${blog.slug}`}
         class="inline-flex items-center text-green-600 font-semibold hover:text-green-700 transition-colors duration-200"
       >
         Read More
