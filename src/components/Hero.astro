@@ -1,0 +1,44 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+  ctaPrimaryText?: string;
+  ctaPrimaryLink?: string;
+  ctaSecondaryText?: string;
+  ctaSecondaryLink?: string;
+}
+
+const {
+  title = "Welcome to Afirel Shop",
+  subtitle = "Curated Amazon Products, Chosen With Care. I help you choose. You buy on Amazon.",
+  ctaPrimaryText = "Browse Curated Pick",
+  ctaPrimaryLink = "/products",
+  ctaSecondaryText = "Learn More",
+  ctaSecondaryLink = "/about"
+} = Astro.props;
+---
+
+<section class="bg-gradient-to-br from-green-50 to-blue-50 py-16 px-4">
+  <div class="container mx-auto text-center">
+    <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
+      <span set:html={title.replace('Afirel Shop', '<span class="text-green-600">Afirel Shop</span>')} />
+    </h1>
+    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+      {subtitle}
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href={ctaPrimaryLink}
+        class="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200"
+      >
+        {ctaPrimaryText}
+      </a>
+      <a
+        href={ctaSecondaryLink}
+        class="border border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors duration-200"
+      >
+        {ctaSecondaryText}
+      </a>
+    </div>
+  </div>
+</section>

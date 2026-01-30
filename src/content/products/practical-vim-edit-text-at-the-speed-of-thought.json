@@ -1,0 +1,34 @@
+{
+  "name": "Practical Vim: Edit Text at the Speed of Thought",
+  "description": "Learn how to use Vim to edit text at the speed of thought.",
+  "price":23.56,
+  "originalPrice": 29.00,
+  "category": "Books",
+  "brand": "Pragmatic Bookshel",
+  "inStock": true,
+  "featured": true,
+  "badge": "Book",
+  "amazonLink": "https://amzn.to/4qOJseD",
+  "images": [
+    {
+      "url": "https://m.media-amazon.com/images/I/81+Lnz+MV-L._SL1500_.jpg",
+      "alt": "Practical Vim: Edit Text at the Speed of Thought cover"
+    }
+  ],
+  "specifications": {
+    "Author": "Drew Nell",
+    "Publisher": "Pragmatic Bookshelf",
+    "Publication Date": "2015-12-01",
+    "Edition": "2nd",
+    "ISBN": "978-1680501278",
+    "Pages": "356",
+    "Language": "English",
+    "Format": "Paperback, Kindle",
+    "Dimensions": "7.5 x 0.74 x 9.25 inches"
+  },
+  "tags": ["book","technology", "vim", "programming"],
+  "rating": 4.8,
+  "reviewCount": 422,
+  "createdAt": "2026-01-30T00:00:00.000Z",
+  "updatedAt": "2026-01-30T00:00:00.000Z"
+}

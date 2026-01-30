@@ -1,0 +1,38 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import ProductCard from './ProductCard.astro';
+
+interface Props {
+  products: Array<{
+    id: string;
+    data: {
+      name: string;
+      brand: string;
+      price: number;
+      originalPrice?: number;
+      images: Array<{ url: string; alt: string }>;
+      badge?: string;
+      rating?: number;
+      reviewCount?: number;
+      inStock: boolean;
+    };
+  }>;
+}
+
+const { products } = Astro.props;
+---
+
+<section class="py-16 px-4">
+  <div class="container mx-auto">
+    <SectionHeader 
+      title="Featured Products" 
+      subtitle="Check out our top-selling and newest arrivals"
+    />
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {products.map((product) => (
+        <ProductCard product={product} size="large" />
+      ))}
+    </div>
+  </div>
+</section>

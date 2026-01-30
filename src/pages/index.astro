@@ -1,5 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import FeaturedProductsSection from "../components/FeaturedProductsSection.astro";
+import LatestProductsSection from "../components/LatestProductsSection.astro";
+import LatestBlogsSection from "../components/LatestBlogsSection.astro";
 import { getCollection } from 'astro:content';
 
 // Get products and blog posts from content collections
@@ -25,253 +29,24 @@ const latestBlogs = allBlogPosts
 ---
 
 <BaseLayout pageTitle="Home">
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-br from-green-50 to-blue-50 py-16 px-4">
-    <div class="container mx-auto text-center">
-      <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
-        Welcome to <span class="text-green-600">Afirel Shop</span>
-      </h1>
-      <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-        Discover amazing products with unbeatable prices. Quality, style, and innovation all in one place.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="/products"
-          class="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200"
-        >
-          Shop Now
-        </a>
-        <a
-          href="/about"
-          class="border border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors duration-200"
-        >
-          Learn More
-        </a>
-      </div>
-    </div>
-  </section>
+  <Hero
+    title="Welcome to <span class='text-green-600'>Afirel Shop</span>"
+    subtitle="Curated Amazon Products, Chosen With Care. I help you choose. You buy on Amazon."
+    ctaPrimaryText="Browse Curated Pick"
+    ctaPrimaryLink="/products"
+    ctaSecondaryText="Learn More"
+    ctaSecondaryLink="/about"
+  />
 
-  <!-- Featured Products Section -->
-  <section class="py-16 px-4">
-    <div class="container mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Featured Products</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Check out our top-selling and newest arrivals</p>
-      </div>
+  {featuredProducts.length > 0 &&
+    <FeaturedProductsSection products={featuredProducts} />
+  }
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {featuredProducts.map((product) => (
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-            <div class="relative">
-              <a href={`/products/${product.id}`}>
-                <img
-                  src={product.data.images[0].url}
-                  alt={product.data.images[0].alt}
-                  class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </a>
-              {product.data.badge && (
-                <span class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  {product.data.badge}
-                </span>
-              )}
-              {product.data.originalPrice && (
-                <span class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded text-sm font-semibold">
-                  SALE
-                </span>
-              )}
-            </div>
-            <div class="p-6">
-              <p class="text-sm text-gray-500 mb-2">{product.data.brand}</p>
-              <h3 class="text-xl font-semibold text-gray-800 mb-3">
-                <a href={`/products/${product.id}`} class="hover:text-green-600 transition-colors duration-200">
-                  {product.data.name}
-                </a>
-              </h3>
-              {product.data.rating && (
-                <div class="flex items-center mb-3">
-                  <div class="flex text-yellow-400">
-                    {Array.from({ length: 5 }, (_, i) => (
-                      <svg
-                        class={`h-4 w-4 ${i < Math.floor(product.data.rating) ? 'fill-current' : 'text-gray-300'}`}
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                      </svg>
-                    ))}
-                  </div>
-                  <span class="ml-2 text-sm text-gray-600">
-                    ({product.data.reviewCount})
-                  </span>
-                </div>
-              )}
-              <div class="flex items-center gap-3 mb-4">
-                <span class="text-2xl font-bold text-green-600">${product.data.price.toFixed(2)}</span>
-                {product.data.originalPrice && (
-                  <span class="text-gray-500 line-through">${product.data.originalPrice.toFixed(2)}</span>
-                )}
-              </div>
-              <button class={`w-full py-3 rounded-lg font-semibold transition-colors duration-200 ${
-                product.data.inStock
-                  ? 'bg-gray-800 text-white hover:bg-gray-900'
-                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-              }`}>
-                {product.data.inStock ? 'Add to Cart' : 'Out of Stock'}
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+  {latestProducts.length > 0 &&
+    <LatestProductsSection products={latestProducts} />
+  }
 
-  <!-- Latest Products Section -->
-  <section class="py-16 px-4 bg-gray-50">
-    <div class="container mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Latest Products</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Discover our newest additions to the collection</p>
-      </div>
-
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-        {latestProducts.map((product) => (
-          <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
-            <div class="relative">
-              <a href={`/products/${product.id}`}>
-                <img
-                  src={product.data.images[0].url}
-                  alt={product.data.images[0].alt}
-                  class="w-full h-32 sm:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </a>
-              {product.data.badge && (
-                <span class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                  {product.data.badge}
-                </span>
-              )}
-            </div>
-            <div class="p-4">
-              <p class="text-xs text-gray-500 mb-1">{product.data.brand}</p>
-              <h3 class="text-sm font-semibold text-gray-800 mb-2 line-clamp-2">
-                <a href={`/products/${product.id}`} class="hover:text-green-600 transition-colors duration-200">
-                  {product.data.name}
-                </a>
-              </h3>
-              <span class="text-lg font-bold text-green-600">${product.data.price.toFixed(2)}</span>
-              <button class={`w-full mt-3 py-2 rounded text-sm font-medium transition-colors duration-200 ${
-                product.data.inStock
-                  ? 'bg-green-600 text-white hover:bg-green-700'
-                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-              }`}>
-                {product.data.inStock ? 'Add to Cart' : 'Out of Stock'}
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div class="text-center mt-12">
-        <a
-          href="/products"
-          class="inline-flex items-center bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200"
-        >
-          View All Products
-          <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Latest Blogs Section -->
-  <section class="py-16 px-4">
-    <div class="container mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Latest Blog Posts</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Stay updated with our latest news, tips, and insights</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {latestBlogs.map((blog, index) => (
-          <article class={`bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ${index >= 3 ? 'lg:col-span-1' : ''}`}>
-            <div class="relative">
-              <a href={`/blogs/${blog.slug}`}>
-                <img
-                  src={blog.data.image.url}
-                  alt={blog.data.image.alt}
-                  class="w-full h-48 object-cover"
-                />
-              </a>
-              <div class="absolute bottom-4 left-4">
-                <span class="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
-                  {blog.data.readTime}
-                </span>
-              </div>
-              {blog.data.featured && (
-                <div class="absolute top-4 right-4">
-                  <span class="bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    Featured
-                  </span>
-                </div>
-              )}
-            </div>
-            <div class="p-6">
-              <div class="flex items-center gap-3 mb-3 text-sm text-gray-500">
-                <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">{blog.data.category}</span>
-                <time>{new Date(blog.data.publishDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</time>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-800 mb-3 hover:text-green-600 transition-colors duration-200">
-                <a href={`/blogs/${blog.slug}`}>{blog.data.title}</a>
-              </h3>
-              <p class="text-gray-600 mb-4 line-clamp-3">{blog.data.description}</p>
-              <div class="flex items-center justify-between">
-                <div class="text-sm text-gray-500">
-                  By {blog.data.author}
-                </div>
-                <a
-                  href={`/blogs/${blog.slug}`}
-                  class="inline-flex items-center text-green-600 font-semibold hover:text-green-700 transition-colors duration-200"
-                >
-                  Read More
-                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
-
-      <div class="text-center mt-12">
-        <a
-          href="/blogs"
-          class="inline-flex items-center bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors duration-200"
-        >
-          View All Blog Posts
-          <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
+  {latestBlogs.length > 0 &&
+    <LatestBlogsSection blogs={latestBlogs} />
+  }
 </BaseLayout>
-
-<style>
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .line-clamp-3 {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-</style>

@@ -12,6 +12,7 @@ const productCollection = defineCollection({
     inStock: z.boolean().default(true),
     featured: z.boolean().default(false),
     badge: z.string().optional(),
+    amazonLink: z.string().optional(),
     images: z.array(z.object({
       url: z.string(),
       alt: z.string(),

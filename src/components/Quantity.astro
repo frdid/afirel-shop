@@ -1,0 +1,55 @@
+---
+const { data } = Astro.props;
+---
+<div class="flex items-center space-x-4">
+  <label for="quantity" class="text-sm font-medium text-gray-700"
+    >Quantity:</label
+  >
+  <div class="flex items-center border border-gray-300 rounded-lg">
+    <button
+      id="decreaseQty"
+      class="px-3 py-2 text-gray-600 hover:text-gray-800 disabled:opacity-50"
+      disabled={!data.inStock}
+    >
+      <svg
+        class="h-4 w-4"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M20 12H4"></path>
+      </svg>
+    </button>
+    <input
+      id="quantity"
+      type="number"
+      value="1"
+      min="1"
+      max="10"
+      class="w-16 text-center py-2 border-0 focus:outline-none disabled:opacity-50"
+      disabled={!data.inStock}
+    />
+    <button
+      id="increaseQty"
+      class="px-3 py-2 text-gray-600 hover:text-gray-800 disabled:opacity-50"
+      disabled={!data.inStock}
+    >
+      <svg
+        class="h-4 w-4"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+      </svg>
+    </button>
+  </div>
+</div>

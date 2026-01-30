@@ -1,7 +1,7 @@
 ---
 title: "Fitness Tech: Tracking Your Health Goals"
 description: "Explore the best fitness trackers and apps to help you stay motivated and reach your health objectives. Learn how modern technology can transform your fitness journey."
-author: "David Martinez"
+author: "Jonny Papap"
 publishDate: 2023-12-08T00:00:00.000Z
 updatedDate: 2023-12-08T00:00:00.000Z
 image:
@@ -28,7 +28,9 @@ Gone are the days of simply counting steps with a basic pedometer. Modern fitnes
 - **Convenience**: All your health data in one place
 - **Community**: Connect with like-minded individuals for support
 
+![Fitness Tech Metrics](https://www.fitnessfirst.com/id/id/-/media/project/evolution-wellness/fitness-first/indonesia/homepage/unique-selling-points/facilities.png)
 ## Essential Fitness Tracking Metrics
+
 
 ### 1. Heart Rate Monitoring
 

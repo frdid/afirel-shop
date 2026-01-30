@@ -1,0 +1,31 @@
+---
+interface Props {
+  author: string;
+  publishDate: Date;
+  updatedDate?: Date;
+  bio?: string;
+}
+
+const { author, publishDate, updatedDate, bio } = Astro.props;
+const defaultBio = "Content creator and technology enthusiast sharing insights and experiences.";
+---
+
+<div class="bg-gray-50 rounded-xl p-6">
+  <div class="flex items-start space-x-4">
+    <div class="flex-shrink-0">
+      <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+        {author.charAt(0)}
+      </div>
+    </div>
+    <div class="flex-1">
+      <h4 class="text-lg font-semibold text-gray-900 mb-1">Written by {author}</h4>
+      <p class="text-gray-600 mb-3">
+        {bio || defaultBio}
+      </p>
+      <div class="text-sm text-gray-500">
+        Published on {new Date(publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        {updatedDate && ` • Updated on ${new Date(updatedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}`}
+      </div>
+    </div>
+  </div>
+</div>
