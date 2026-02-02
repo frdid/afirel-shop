@@ -6,6 +6,8 @@ import LatestProductsSection from "../components/LatestProductsSection.astro";
 import LatestBlogsSection from "../components/LatestBlogsSection.astro";
 import { getCollection } from 'astro:content';
 
+const BASE_URL  = import.meta.env.BASE_URL;
+
 // Get products and blog posts from content collections
 const allProducts = await getCollection('products');
 const allBlogPosts = await getCollection('blog');
@@ -33,9 +35,9 @@ const latestBlogs = allBlogPosts
     title="Welcome to <span class='text-green-600'>Afirel Shop</span>"
     subtitle="Curated Amazon Products, Chosen With Care. I help you choose. You buy on Amazon."
     ctaPrimaryText="Browse Curated Pick"
-    ctaPrimaryLink="/products"
+    ctaPrimaryLink={`${BASE_URL}/products`}
     ctaSecondaryText="Learn More"
-    ctaSecondaryLink="/about"
+    ctaSecondaryLink={`${BASE_URL}/about`}
   />
 
   {featuredProducts.length > 0 &&
