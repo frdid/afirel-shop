@@ -1,0 +1,34 @@
+{
+  "name": "Mastering Vim: Efficient and effortless editing with Vim and Vimscript",
+  "description": "Discover what makes Vim one of the most popular text editors in the world, renowned for its blend of efficiency, customization, extensibility, and portability. With Mastering Vim, you’ll come to appreciate its extensive plugin system and seamless integration with various tools, which enable Vim to provide developers with an extensible and customizable development environment for programmers.",
+  "price":40.55,
+  "category": "Books",
+  "brand": "Packt Publishing",
+  "inStock": true,
+  "featured": false,
+  "badge": "Book",
+  "amazonLink": "https://amzn.to/4qXcOaP",
+  "images": [
+    {
+      "url": "https://m.media-amazon.com/images/I/61iJhkpTCrL._SL1360_.jpg",
+      "alt": "Mastering Vim: Efficient and effortless editing with Vim and Vimscript"
+    }
+  ],
+  "specifications": {
+    "Author": "Ruslan Osipov",
+    "Publisher": "Pragmatic Bookshelf",
+    "Publication Date": "2024-07-31",
+    "Edition": "2nd",
+    "ISBN-10": "1835081878",
+    "ISBN-13": "978-1835081877",
+    "Pages": "300",
+    "Language": "English",
+    "Format": "Paperback, Kindle",
+    "Dimensions": "7.5 x 0.68 x 9.25 inches"
+  },
+  "tags": ["book","technology", "vim", "programming", "kindle"],
+  "rating": 3.9,
+  "reviewCount": 7,
+  "createdAt": "2026-02-01T00:00:00.000Z",
+  "updatedAt": "2026-02-01T00:00:00.000Z"
+}

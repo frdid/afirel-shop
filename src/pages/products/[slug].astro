@@ -20,7 +20,7 @@ interface Props {
 export async function getStaticPaths() {
   const products = await getCollection("products");
   return products.map((product: Product) => ({
-    params: { slug: product.id },
+   params: { slug: product.id },
     props: { product },
   }));
 }
@@ -34,9 +34,9 @@ const { data } = product;
     <!-- Breadcrumb -->
     <nav class="mb-8">
       <ol class="flex items-center space-x-2 text-sm text-gray-500">
-        <li><a href="/afirel-shop/" class="hover:text-green-600">Home</a></li>
+        <li><a href="/" class="hover:text-green-600">Home</a></li>
         <li><span class="mx-2">/</span></li>
-        <li><a href="/afirel-shop/products" class="hover:text-green-600">Products</a></li>
+        <li><a href="/products" class="hover:text-green-600">Products</a></li>
         <li><span class="mx-2">/</span></li>
         <li class="text-gray-800 font-medium">{data.name}</li>
       </ol>
@@ -299,7 +299,7 @@ const { data } = product;
     <!-- Back to Products -->
     <div class="text-center">
       <a
-        href="/afirel-shop/products"
+        href="/products"
         class="inline-flex items-center bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors duration-200"
       >
         <svg

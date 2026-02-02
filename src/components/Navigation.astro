@@ -1,25 +1,28 @@
+---
+const BASE_URL = import.meta.env.BASE_URL;
+---
 <div class="flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0">
   <a
     class="block px-4 py-2 text-gray-700 hover:text-green-700 hover:bg-green-50 rounded-md font-medium transition-colors duration-200 text-center md:text-left"
-    href="/afirel-shop/"
+    href={BASE_URL}
   >
     Home
   </a>
   <a
     class="block px-4 py-2 text-gray-700 hover:text-green-700 hover:bg-green-50 rounded-md font-medium transition-colors duration-200 text-center md:text-left"
-    href="/afirel-shop/products"
+    href={`${BASE_URL}products`}
   >
     Products
   </a>
   <a
     class="block px-4 py-2 text-gray-700 hover:text-green-700 hover:bg-green-50 rounded-md font-medium transition-colors duration-200 text-center md:text-left"
-    href="/afirel-shop/blogs"
+    href={`${BASE_URL}blogs`}
   >
     Blogs
   </a>
   <a
     class="block px-4 py-2 text-gray-700 hover:text-green-700 hover:bg-green-50 rounded-md font-medium transition-colors duration-200 text-center md:text-left"
-    href="/afirel-shop/about"
+    href={`${BASE_URL}about`}
   >
     About
   </a>
