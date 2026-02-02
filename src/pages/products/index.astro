@@ -121,11 +121,11 @@ const brands = [...new Set(products.map(product => product.data.brand))];
                 </span>
               )}
 
-              {product.data.originalPrice && (
+              <!-- {product.data.originalPrice && (
                 <span class="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded text-sm font-semibold">
                   SALE
                 </span>
-              )}
+              )} -->
 
               {!product.data.inStock && (
                 <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
@@ -179,16 +179,29 @@ const brands = [...new Set(products.map(product => product.data.brand))];
               </div>
 
               <!-- Add to Cart Button -->
-              <button
-                class={`w-full py-3 cursor-pointer bg-green-600 rounded-lg font-semibold transition-colors duration-200 ${
+              <div class="flex flex-col items-center gap-3 mb-4">
+              <a href={`${BASE_URL}products/${product.id}`}
+                class={`w-full py-3 cursor-pointer text-center bg-green-600 rounded-lg font-semibold transition-colors duration-200 ${
                   product.data.inStock
                     ? 'bg-gray-800 text-white hover:bg-gray-900'
                     : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                 }`}
-                disabled={!product.data.inStock}
               >
-                {product.data.inStock ? 'See Product' : 'Out of Stock'}
-              </button>
+                {product.data.inStock ? 'View Details' : 'Out of Stock'}
+              </>
+              {product.data.inStock && (
+                <a href={product.data.amazonLink} target="_blank" rel="noopener noreferrer"
+                  class={`w-full py-3 cursor-pointer border-2 border-green-600 bg-white rounded-lg font-semibold transition-colors duration-200
+                          text-center
+                        ${product.data.inStock
+                      ? 'bg-green-100 text-green-600 hover:bg-green-50'
+                      : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  }`}
+                >
+                  View on Amazon
+                </a>
+              )}
+              </div>
             </div>
           </div>
         ))}
