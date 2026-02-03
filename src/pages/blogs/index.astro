@@ -2,6 +2,8 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection } from 'astro:content';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 // Get all blog posts
 const allPosts = await getCollection('blog');
 
@@ -126,14 +128,14 @@ const categories = [...new Set(publishedPosts.map(post => post.data.category))];
                 </div>
 
                 <h3 class="text-2xl font-bold text-gray-800 mb-4 hover:text-green-600 transition-colors duration-200">
-                  <a href={`/blogs/${post.slug}`}>{post.data.title}</a>
+                  <a href={`${BASE_URL}blogs/${post.slug}`}>{post.data.title}</a>
                 </h3>
 
                 <p class="text-gray-600 mb-6 line-clamp-3">{post.data.description}</p>
 
                 <div class="flex items-center justify-between">
                   <a
-                    href={`/blogs/${post.slug}`}
+                    href={`${BASE_URL}blogs/${post.slug}`}
                     class="inline-flex items-center text-green-600 font-semibold hover:text-green-700 transition-colors duration-200"
                   >
                     Read More
@@ -201,7 +203,7 @@ const categories = [...new Set(publishedPosts.map(post => post.data.category))];
               </div>
 
               <h3 class="text-xl font-semibold text-gray-800 mb-3 hover:text-green-600 transition-colors duration-200 line-clamp-2">
-                <a href={`/blogs/${post.slug}`}>{post.data.title}</a>
+                <a href={`${BASE_URL}blogs/${post.slug}`}>{post.data.title}</a>
               </h3>
 
               <p class="text-gray-600 mb-4 text-sm line-clamp-3">{post.data.description}</p>
@@ -212,7 +214,7 @@ const categories = [...new Set(publishedPosts.map(post => post.data.category))];
                 </div>
 
                 <a
-                  href={`/blogs/${post.slug}`}
+                  href={`${BASE_URL}blogs/${post.slug}`}
                   class="text-green-600 font-medium text-sm hover:text-green-700 transition-colors duration-200"
                 >
                   Read More →

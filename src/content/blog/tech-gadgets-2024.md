@@ -18,9 +18,6 @@ As we step into 2024, the world of technology continues to evolve at an unpreced
 
 ## 1. AI-Powered Smart Glasses
 
-![Image sample](/images/image-1.jpg)
-
-
 The future of wearable technology is here with the latest generation of smart glasses. These devices seamlessly blend digital information with the real world, offering features like:
 
 - Real-time translation overlays
@@ -32,7 +29,7 @@ The future of wearable technology is here with the latest generation of smart gl
 
 ## 2. Ultra-Fast Wireless Charging Stations
 
-![Src Image](../../assets/images/src-image.jpg)
+![Src Image](./images/src-image.jpg)
 
 Gone are the days of waiting hours for your devices to charge. The new generation of wireless charging stations can power up your smartphone from 0 to 80% in just 15 minutes.
 
