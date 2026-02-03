@@ -1,0 +1,33 @@
+{
+  "name": "Design as Art by Bruno Munari",
+  "description": "Bruno Munari was among the most inspirational designers of all time, described by Picasso as “the new Leonardo.” Munari insisted that design be beautiful, functional and accessible, and this enlightening and highly entertaining book sets out his ideas about visual, graphic and industrial design and the role it plays in the objects we use everyday. Lamps, road signs, typography, posters, children's books, advertising, cars and chairs—these are just some of the subjects to which he turns his illuminating gaze.",
+  "price": 15.81,
+  "category": "Books",
+  "brand": "Penguin Classics",
+  "inStock": true,
+  "featured": true,
+  "badge": "Book",
+  "amazonLink": "https://amzn.to/4aws87p",
+  "images": [
+    {
+      "url": "https://m.media-amazon.com/images/I/61gec0KifkL._SL1071_.jpg",
+      "alt": "Design as Art by Bruno Munari book cover"
+    }
+  ],
+  "specifications": {
+    "Author": "Bruno Munari",
+    "Publisher": "Penguin Classics",
+    "Publication Date": "May 20, 2009",
+    "ISBN-10": "0141035811",
+    "ISBN-13": "978-0141035819",
+    "Pages": "224 pages",
+    "Language": "English",
+    "Format": "Paperback",
+    "Dimensions": "4.4 x 0.65 x 7.1 inches"
+  },
+  "tags": ["book","design"],
+  "rating": 4.7,
+  "reviewCount": 1140,
+  "createdAt": "2026-02-03",
+  "updatedAt": "2026-02-03"
+}

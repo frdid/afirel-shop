@@ -10,6 +10,10 @@
   "amazonLink": "https://amzn.to/46gCRRP",
   "images": [
     {
+      "url": "https://m.media-amazon.com/images/I/71PZw651jXL._AC_SY535_.jpg",
+      "alt": ""
+    },
+    {
       "url": "https://m.media-amazon.com/images/I/61oU41K46lL._AC_SY535_.jpg",
       "alt": "Bracelet inside a pink box"
     },
@@ -20,10 +24,6 @@
     {
       "url": "https://m.media-amazon.com/images/I/81t83Zyy3cL._AC_SY535_.jpg",
       "alt": "The use of the bracelet"
-    },
-    {
-      "url": "https://m.media-amazon.com/images/I/71PZw651jXL._AC_SY535_.jpg",
-      "alt": ""
     },
     {
       "url": "https://m.media-amazon.com/images/I/71oc+Ia1H5L._AC_SY500_.jpg",

@@ -1,0 +1,35 @@
+{
+  "name": "",
+  "description": "",
+  "price": 0,
+  "OriginalPrice": 0,
+  "category": "",
+  "brand": "",
+  "inStock": true,
+  "featured": false,
+  "badge": "",
+  "amazonLink": "",
+  "images": [
+    {
+      "url": "",
+      "alt": ""
+    }
+  ],
+  "specifications": {
+    "Author": "",
+    "Publisher": "",
+    "Publication Date": "",
+    "Edition": "",
+    "ISBN-10": "",
+    "ISBN-13": "",
+    "Pages": "",
+    "Language": "",
+    "Format": "",
+    "Dimensions": ""
+  },
+  "tags": ["book","technology", "vim", "programming", "kindle"],
+  "rating": 0,
+  "reviewCount": 0,
+  "createdAt": "",
+  "updatedAt": ""
+}
