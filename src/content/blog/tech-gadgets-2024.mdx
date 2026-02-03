@@ -13,12 +13,28 @@ featured: false
 readTime: "5 min read"
 draft: false
 ---
+import { Image } from "astro:assets";
+import image from "./images/src-image.jpg";
 
 As we step into 2024, the world of technology continues to evolve at an unprecedented pace. From artificial intelligence becoming more accessible to sustainable tech solutions gaining momentum, this year promises to bring exciting innovations that will transform how we work, play, and live.
 
 ## 1. AI-Powered Smart Glasses
 
-The future of wearable technology is here with the latest generation of smart glasses. These devices seamlessly blend digital information with the real world, offering features like:
+
+<Image src={image} alt="Smart Glasses" width={760} inferSize={true} />
+
+<blockquote>
+  <p>Ini ditambah dari MDX dengan HTML tag</p>
+</blockquote>
+
+```js
+const varNumber = 123;
+let varString = "Test blockquote";
+Blockquote on markdown
+```
+
+
+The future of wearable `technology` is here with the latest generation of smart glasses. These devices seamlessly blend digital information with the real world, offering features like:
 
 - Real-time translation overlays
 - Navigation assistance without looking at your phone
@@ -29,7 +45,7 @@ The future of wearable technology is here with the latest generation of smart gl
 
 ## 2. Ultra-Fast Wireless Charging Stations
 
-![Src Image](./images/src-image.jpg)
+![Src Image|300px](./images/src-image.jpg)
 
 Gone are the days of waiting hours for your devices to charge. The new generation of wireless charging stations can power up your smartphone from 0 to 80% in just 15 minutes.
 
