@@ -1,0 +1,46 @@
+{
+  "name": "Dainty 925 Sterling Silver Infinity Heart Initial Necklace",
+  "description": "Heart Initial Necklace: Delicate and beautiful heart initial necklace with 26 letters from A-Z, you can choose each letter with a special meaning, heart initial pendant is an eternal expression of love.",
+  "price": 29.98,
+  "category": "Jewelry",
+  "brand": "Pendant Necklace",
+  "inStock": true,
+  "featured": false,
+  "badge": "Jewelry",
+  "amazonLink": "https://amzn.to/4bEpUVv",
+  "images": [
+    {
+      "url": "https://m.media-amazon.com/images/I/71xtWtAb4ZL._AC_SY695_.jpg",
+      "alt": "Letter Necklace"
+    },
+    {
+      "url": "https://m.media-amazon.com/images/I/713CP-PhqnL._AC_SY695_.jpg",
+      "alt": "Heart Initial Necklace"
+    },
+    {
+      "url": "https://m.media-amazon.com/images/I/61Ux7R8KCRL._AC_SX535_.jpg",
+      "alt": "ITS4YEO necklace and box"
+    },
+    {
+      "url": "https://m.media-amazon.com/images/I/71IFt76jsNL._AC_SY535_.jpg",
+      "alt": "Starling Silver necklace detail"
+    },
+    {
+      "url": "https://m.media-amazon.com/images/I/81zYK3sXQcL._AC_SY535_.jpg",
+      "alt": "Other initial letter necklace"
+    }
+  ],
+  "specifications": {
+    "Material": "Sterling Silver",
+    "Metal Type": "Silver",
+    "Clasp Type": "Lobster",
+    "Chain Type": "Link",
+    "Gem Type": "Cubic Zirconia",
+    "Item Type Name": "Necklace"
+  },
+  "tags": ["Heart", "Silver", "Necklace", "Jewelry", "Infinity"],
+  "rating": 4.9,
+  "reviewCount": 109,
+  "createdAt": "2026-02-06T00:00:00.000Z",
+  "updatedAt": "2026-02-06T00:00:00.000Z"
+}

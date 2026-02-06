@@ -1,0 +1,33 @@
+{
+  "name": "",
+  "description": "",
+  "price": 0,
+  "category": "Jewelry",
+  "brand": "",
+  "inStock": true,
+  "featured": false,
+  "badge": "Jewelry",
+  "amazonLink": "",
+  "images": [
+    {
+      "url": "",
+      "alt": ""
+    },
+    {
+      "url": "",
+      "alt": ""
+    }
+  ],
+  "specifications": {
+    "Item Width": "",
+    "Material": "",
+    "Meta Type": "",
+    "Gem Type": "",
+    "Item Type Name": ""
+  },
+  "tags": ["", "", "", "", ""],
+  "rating": 4.9,
+  "reviewCount": 197,
+  "createdAt": "",
+  "updatedAt": ""
+}
