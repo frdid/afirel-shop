@@ -2,7 +2,10 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-const { pageTitle } = Astro.props;
+const { pageTitle, pageType, product } = Astro.props;
+
+
+
 ---
 
 <html lang="en">
@@ -12,6 +15,27 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="p:domain_verify" content="5dd1767b51050883e1c727caf3f72e99"/>
+    {pageType === "product" ? (
+      <>
+        <meta property="og:type" content="product" />
+        <meta property="og:title" content={`${product.data.name}`} />
+        <meta
+          property="og:description"
+          content={product.data.description}
+        />
+        <meta
+          property="og:url"
+          content={`https://afirel.com/products/${product.id}`}
+        />
+        <meta property="og:site_name" content="Afirel Shop" />
+        {product.data.images && product.data.images.map((image: { url: string, alt: string }) => (
+          <meta property="og:image" content={image.url} />
+        ))}
+        <meta property="product:price:amount" content={`${product.data.price}`} />
+        <meta property="product:price:currency" content="USD" />
+        <meta property="og:availability" content="instock" />
+      </>
+    ) : null}
     <title>{pageTitle} | Afirel Shop</title>
   </head>
   <body class="bg-white">

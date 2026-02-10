@@ -31,7 +31,7 @@ const { product } = Astro.props;
 const { data } = product;
 ---
 
-<BaseLayout pageTitle={data.name}>
+<BaseLayout pageTitle={data.name} pageType="product" product={product}>
   <div class="container mx-auto px-4 py-8">
     <!-- Breadcrumb -->
     <nav class="mb-8">
