@@ -1,0 +1,34 @@
+---
+import { Picture } from "astro:assets";
+import PinterestLogo from "../assets/images/pinterest-logo.png";
+const { url, media, description } = Astro.props;
+const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&media=${encodeURIComponent(media)}&description=${encodeURIComponent(description)}`;
+---
+
+<a
+  href={pinterestUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="pinterest-share-button"
+>
+  <slot><Picture class="pinterest-logo" src={PinterestLogo} alt="Pinterest Logo" /> Pin It</slot>
+</a>
+
+<style>
+.pinterest-logo {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.pinterest-share-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    background-color: #e70023;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+</style>

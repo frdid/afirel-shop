@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import PinterestShare from "../../components/PinterestShare.astro";
 import { getCollection } from "astro:content";
 
 const BASE_URL  = import.meta.env.BASE_URL;
@@ -164,10 +165,12 @@ const { data } = product;
           {data.name}
         </h1>
 
+
         <!-- Rating -->
         {
           data.rating && (
             <div class="flex items-center space-x-2">
+              <PinterestShare url={"https://afirel.com/products/" + product.id} media={data.images[0].url} description={data.description} />
               <div class="flex text-yellow-400">
                 {Array.from({ length: 5 }, (_, i) => (
                   <svg
@@ -182,6 +185,7 @@ const { data } = product;
                 {data.rating}
               </span>
               <span class="text-gray-500">({data.reviewCount} reviews)</span>
+
             </div>
           )
         }
